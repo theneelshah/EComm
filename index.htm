@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navbar</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style type="text/css">
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+  .navbar{
+  	line-height: 40px;
+  }
+  .nav-link{
+  	font-size: 20px;
+  	margin: 20px;
+  }
+  header{
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    margin: 0;
+    background-color: #d8f7ff;
+  }
+  header span{
+    font-weight: bold;
+  }
+  .image-container{
+    margin: 50px;
+    padding: 0;
+  }
+  #mainImg{
+    width: 100%;
+  }
+  .row{
+    width: 100%;
+    height: 10%;
+    margin-top: 20px;
+  }
+  .col-sm{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .smallImg{
+    width: 100%;
+    height: 100%;
+  }
+  #left{
+    width: 50%;
+    float: left;
+    margin-left: 0;
+  }
+  #right{
+    padding-left: 0%;
+    width: 40%;
+    top: 0;
+    background-color: red;
+    float: right;
+    position: relative;
+  }
+	</style>
+</head>
+<body>
+  <header>
+    BON<span>FIRE</span>
+  </header>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  		<div class="container">
+    <a class="navbar-brand" href="#"><span class="navbar-toggler-icon"></span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav navbar-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">Men</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">T-shirt</a>
+            <a class="dropdown-item" href="#">Jeans</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sunglasses</a>
+            <a class="dropdown-item" href="#">Jewellery</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown">Women</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+            <a class="dropdown-item" href="#">Tops</a>
+            <a class="dropdown-item" href="#">Leggings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Cosmetics</a>
+            <a class="dropdown-item" href="#">Jewellery</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+
+<div class="container">
+
+  <div class="image-container" id="left">
+    <img src="images/1.jpg" id="mainImg">
+
+    <div class="row">
+      <div class="col-sm">
+        <img src="images/1.jpg" class="smallImg" onclick="changeImg('1')">
+      </div>
+      <div class="col-sm">
+        <img src="images/2.jpg" class="smallImg" onclick="changeImg('2')">
+      </div>
+      <div class="col-sm">
+        <img src="images/3.jpg" class="smallImg" onclick="changeImg('3')">
+      </div>
+  </div>
+ 
+  <div id="right">
+    hello
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  function changeImg(img){
+    var s = "images/" + img + ".jpg"
+    $("#mainImg").attr("src", s)
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+</body>
+</html>
