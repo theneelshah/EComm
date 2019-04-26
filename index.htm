@@ -3,15 +3,16 @@
 <head>
 	<title>Navbar</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    BON<span>FIRE</span>
+    BON<span class="bold">FIRE</span>
   </header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   		<div class="container">
-    <a class="navbar-brand" href="#"><span class="navbar-toggler-icon"></span></a>
+    <a class="navbar-brand" href="#"><span class="fas fa-cart-plus"></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -52,7 +53,6 @@
 </nav>
 
 <div class="container">
-
   <div class="image-container" id="left">
     <img src="images/1.jpg" id="mainImg">
 
@@ -69,14 +69,68 @@
   </div>
  
   <div id="right">
-    hello
-  </div>
-
+    BON<span class="bold">FIRE</span>
+    <h1>Decode T-Shirt Black Color</h1>
+    <div class="rating">
+        <span><i class="fas fa-star checked-star"></i> </span>
+        <span><i class="fas fa-star checked-star"></i> </span>
+        <span><i class="fas fa-star checked-star"></i> </span>
+        <span><i class="fas fa-star checked-star"></i> </span>
+        <span><i class="fas fa-star-half-alt checked-star"></i> </span>
+        (3 reviews) | <a href="#">Add review</a>
+    </div>
+    <div id="money">
+        ₹ <span></span>
+    </div>
+    <div class="information">
+      Availability: <span class="info-specify">In stock</span> <br>
+      Product Code: <span class="info-specify">#4657</span> <br>
+      Tags: <span class="info-specify">Fashion, Tshirt, Programmer</span>
+    </div>
+    <div class="description">
+      Basic Tshirt with superb fit with a crew neck.
+      <ul>
+        <li><span class="fas fa-dot-circle"></span> Slim Fit</li> <br>
+        <li><span class="fas fa-dot-circle"></span> 100% Cotton</li> <br>
+        <li><span class="fas fa-dot-circle"></span> Machine wash cold</li> <br>
+        <li><span class="fas fa-dot-circle"></span> This product has been Bio-Washed for extra softness</li> <br>
+      </ul>
+    </div>
+    <div class="dropdown">      
+        <button class="btn btn-secondary dropdown-toggle" type="button" 
+        id="dropdownColorButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Colors
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownColorButton">
+          <button class="dropdown-item" href="#" onclick='toggleColor(1)'>Black</button>
+          <button class="dropdown-item" href="#" onclick='toggleColor(2)'>Grey</button>
+        </div>
+      </div>
+      <span class="colorSpan">Black</span>
+      <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" 
+          id="dropdownSizeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Size
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownSizeButton">
+            <button class="dropdown-item" href="#" onclick="toggleSize(0)">S</button>
+            <button class="dropdown-item" href="#" onclick="toggleSize(1)">M</button>
+            <button class="dropdown-item" href="#" onclick="toggleSize(2)">L</button>
+            <button class="dropdown-item" href="#" onclick="toggleSize(3)">XL</button>
+          </div>
+        </div>
+        <span class="sizeSpan">S</span>
+        <div>
+        Quantity:  <input type="number" class="form-control" name="qty" id="qty" min="1" max="5" value = "1">
+      </div>
+      <button type="button" class="btn btn-warning" id="addCart">Add to Cart</button>
+    </div>
+   
 </div>
 
-<script type="text/javascript" src="js/script.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

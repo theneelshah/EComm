@@ -44,13 +44,52 @@
   #left{
     width: 50%;
     float: left;
+    left: 0;
+    z-index: 1;
     margin-left: 0;
+    margin-right: 0;
   }
   #right{
     padding-left: 0%;
     width: 40%;
-    top: 0;
-    background-color: red;
-    float: right;
-    position: relative;
+    top: 10;
+    left: 50%;
+    float: left;
+    position: absolute;
+    font-size: 25px;
   }
+  .checked-star{
+    color: orange;
+  }
+  #money{
+    color: #00f6ff;
+    font-size: 60px;
+  }
+
+  .bold{
+      font-weight: bold;
+      color: teal;
+    }
+    .info-specify{
+        margin-top: 30px;
+        font-weight: lighter;
+        color: #2db7c4;
+    }
+    .description{
+        margin-top: 30px;
+    }
+    .description ul li{
+        list-style-type: none;
+    }
+    .fa-dot-circle{
+        font-size: 20px;
+    }
+    .dropdown{
+        margin-top: 15px;
+    }
+    #qty{
+        margin-top: 15px;
+    }
+    #addCart{
+        margin-top: 15px;
+    }
