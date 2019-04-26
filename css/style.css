@@ -52,11 +52,13 @@
   #right{
     padding-left: 0%;
     width: 40%;
-    top: 10;
+    top: 0;
     left: 50%;
     float: left;
+    margin-top: 160px;
+    margin-left: 15px;
     position: absolute;
-    font-size: 25px;
+    font-size: 100%;
   }
   .checked-star{
     color: orange;
@@ -93,3 +95,8 @@
     #addCart{
         margin-top: 15px;
     }
+    .cartItem img{
+        height: 10%;
+        width: 10%;
+    }
+    

@@ -12,7 +12,7 @@
   </header>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   		<div class="container">
-    <a class="navbar-brand" href="#"><span class="fas fa-cart-plus"></span></a>
+    <a class="navbar-brand" href="#"><span class="fas fa-cart-plus" id="cartButton"></span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -70,7 +70,7 @@
  
   <div id="right">
     BON<span class="bold">FIRE</span>
-    <h1>Decode T-Shirt Black Color</h1>
+    <h1> <span id="prodTitle">Decode T-Shirt For Coders</span> </h1>
     <div class="rating">
         <span><i class="fas fa-star checked-star"></i> </span>
         <span><i class="fas fa-star checked-star"></i> </span>
@@ -120,14 +120,51 @@
           </div>
         </div>
         <span class="sizeSpan">S</span>
-        <div>
-        Quantity:  <input type="number" class="form-control" name="qty" id="qty" min="1" max="5" value = "1">
-      </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" 
+            id="dropdownQtyButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Quantity
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownQtyButton">
+              <button class="dropdown-item" href="#" onclick="toggleQty(1)">1</button>
+              <button class="dropdown-item" href="#" onclick="toggleQty(2)">2</button>
+              <button class="dropdown-item" href="#" onclick="toggleQty(3)">3</button>
+              <button class="dropdown-item" href="#" onclick="toggleQty(4)">4</button>
+              <button class="dropdown-item" href="#" onclick="toggleQty(5)">5</button>
+            </div>
+            
+          </div>
+          <span class="qtySpan">1</span> 
+          <br>
       <button type="button" class="btn btn-warning" id="addCart">Add to Cart</button>
     </div>
    
 </div>
-
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Header</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="cartItem">
+                <img src="">
+                <h4><span id="cartTitle"></span></h4>
+                <br>
+                Size: <span id="cartSize"></span> <br>
+                Quantiy: <span id="cartQty"></span> <br>
+                Cost: <span id="cartPrice"></span>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default">Order</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	

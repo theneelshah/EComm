@@ -20,6 +20,18 @@ function toggleSize(size){
     if(size == 3)
         $(".sizeSpan").text("XL")
 }
+function toggleQty(qty){
+    if(qty == 1)
+        $(".qtySpan").text("1")
+    if(qty == 2)
+        $(".qtySpan").text("2")
+    if(qty == 3)
+        $(".qtySpan").text("3")
+    if(qty == 4)
+        $(".qtySpan").text("4")
+    if(qty == 5)
+        $(".qtySpan").text("5")
+}
   function toggleColor(color){
       var img = $('.image-container img').attr("src")
       if(img.match('1') || img.match('2') || img.match('3')){
@@ -44,5 +56,24 @@ function toggleSize(size){
         c = 1
       }
   }
+
+$(document).ready(function () {
+    $("#cartButton").click(cart)
+    $("#addCart").click(cart)
+});
+
+var cart = function(){
+    // title
+    $('#cartTitle').text($('#prodTitle').text())
+    // image
+    $('.cartItem img').attr('src', $('#mainImg').attr('src'))
+    // size
+    $('#cartSize').text($(".sizeSpan").text())
+    // Qty
+    $('#cartQty').text($(".qtySpan").text())
+    // Price
+     $('#cartPrice').text( $('#money span').text() * $(".qtySpan").text() )
+     $('#myModal').modal('show');
+}
 
   $("#money span").text('350')
