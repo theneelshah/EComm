@@ -67,6 +67,8 @@ var cart = function(){
     $('#cartTitle').text($('#prodTitle').text())
     // image
     $('.cartItem img').attr('src', $('#mainImg').attr('src'))
+    // color
+    $('#cartColor').text($(".colorSpan").text())
     // size
     $('#cartSize').text($(".sizeSpan").text())
     // Qty
